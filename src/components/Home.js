@@ -41,23 +41,12 @@ class Home extends React.Component {
         }
         return (
             <div className='dashboard'>
-                <DashboardButton text='Unanswered Questions' onClickFunc={this.unansweredQuestions} btnColor={this.state.btnColorOne}/>
-                <DashboardButton text='Answered Questions' onClickFunc={this.answeredQuestions} btnColor={this.state.btnColorTwo}/>
-                {/* <button style={{
-                    flex: 1, height: '40px',
-                    color: 'black',
-                    backgroundColor: this.state.btnColorOne,
-                    borderRadius: '5px', fontSize: '17px', width: '50%', borderColor: 'white'
-                    , borderWidth: '3px'
-                }} onClick={this.unansweredQuestions}>Unanswered Questions</button>
-                <button style={{
-                    flex: 1, height: '40px',
-                    color: 'black',
-                    backgroundColor: this.state.btnColorTwo,
-                    borderRadius: '5px', fontSize: '17px', marginBottom: '10px', width: '50%', borderColor: 'white'
-                    , borderWidth: '3px'
-                }} onClick={this.answeredQuestions}>Answered Questions</button> */}
-
+                <DashboardButton text='Unanswered Questions'
+                    onClickFunc={this.unansweredQuestions}
+                    btnColor={this.state.btnColorOne} />
+                <DashboardButton text='Answered Questions'
+                    onClickFunc={this.answeredQuestions}
+                    btnColor={this.state.btnColorTwo} />
                 <div>{this.questionsList}</div>
 
             </div>
@@ -84,7 +73,7 @@ function mapStateToProps({ users, questions, authedUser }, props) {
 export default connect(mapStateToProps)(Home)
 
 function DashboardButton(props) {
-    return(
+    return (
         <button style={{
             flex: 1, height: '40px',
             color: 'black',
