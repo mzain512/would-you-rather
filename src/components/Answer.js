@@ -15,7 +15,7 @@ class Answer extends React.Component {
             optionTwoColor = 'rgb(230,251,249)'
         }
         return (
-            <div style={{ margin: '5px auto', border: 'solid', width: '550px', borderColor: 'cyan', borderRadius: '5px' }}>
+            <div style={{ margin: '5px auto', border: 'solid', width: '550px', borderColor: 'cyan', borderRadius: '5px' , textAlign:'center'}}>
                 <div style={{ marginLeft: '10px', textAlign: 'center', borderBottom: 'solid', borderBottomColor: 'grey' }}>
                     <h4>{'Asked by ' + author.name}</h4>
                 </div>
@@ -25,7 +25,7 @@ class Answer extends React.Component {
                         height='80px' style={{ borderRadius: '40px', margin: 'auto', textAlign: 'center' }}></img>
                     <h2>Results</h2>
                 </div>
-                <div style={{ display: 'inline-flex' }}>
+                <div style={{ display: 'flex' }}>
 
                     <AnswerBox optionColor={optionOneColor}
                         questionText={question['optionOne'].text}

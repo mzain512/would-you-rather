@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
+import * as Constants from '../utils/urls'
+
 class Nav extends React.Component {
     render() {
         const { authedUser } = this.props
@@ -9,17 +11,17 @@ class Nav extends React.Component {
                 <nav className='nav'>
                     <ul>
                         <li>
-                            <NavLink className='navLinks' to='/' exact activeClassName='active'>
+                            <NavLink className='navLinks' to={Constants.HOME} exact activeClassName='active'>
                                 Home
               </NavLink>
                         </li>
                         <li>
-                            <NavLink className='navLinks' to='/' activeClassName='active'>
+                            <NavLink className='navLinks' to={Constants.ADD_QUESTION} activeClassName='active'>
                                 New Question
               </NavLink>
                         </li>
                         <li>
-                            <NavLink className='navLinks' to='/' activeClassName='active'>
+                            <NavLink className='navLinks' to={Constants.HOME} activeClassName='active'>
                                 LeaderBoard
               </NavLink>
                         </li>
@@ -32,7 +34,7 @@ class Nav extends React.Component {
                         )}
                         {authedUser && (
                             <li>
-                                <NavLink className='navLinks' to='/' activeClassName='active'>
+                                <NavLink className='navLinks' to={Constants.HOME} activeClassName='active'>
                                     Logout
               </NavLink>
 
