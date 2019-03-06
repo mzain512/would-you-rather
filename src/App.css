@@ -23,6 +23,199 @@
   color: #61dafb;
 }
 
+.SignIn {
+  border-style: solid;
+  height: 400px;
+  width: 25%;
+  margin: auto;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  border-radius: 10px;
+  border-color: cyan;
+}
+
+.SignInHeader1 {
+  font-family: "Times New Roman";
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin : 10px ;
+  display: block;
+  padding: 0px
+}
+
+.SignInHeader2 {
+  font-family: "Times New Roman";
+  font-size: 14px;
+  font-weight: normal;
+  color: gray ;
+  text-align: center;
+  margin : 10px;
+  display: block; 
+  padding: 0px
+}
+
+.dropDown {
+  width: 300px;
+  height:35px;
+  margin: 10px;
+  color: #111111;
+  border-color: cyan
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+  border-bottom: solid;
+  border-bottom-color: cyan;
+  margin: 0px;
+}
+
+.nav li:first-child {
+  padding-left: 0;
+}
+
+.navLinks {
+  color: rgb(60,171,143,1);
+  font-size: 18px;
+  font-weight: bolder; 
+}
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.dashboard {
+  border-style: solid;
+  width: 35%;
+  margin: auto;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  border-color: cyan;
+  border-radius: 10px;
+
+}
+
+.questionCard {
+  margin: 8px auto;
+  border-style: solid;
+  /* height: 200px; */
+  width:90%;
+  border-color: cyan;
+  border-radius: 10px;
+}
+
+.questionHeading {
+  background-color: grey;
+  border-bottom: thin;
+  border-bottom: #111111;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 3px;
+  height: 25px;
+  margin: auto;
+  font-weight: bold;
+  
+}
+
+.profileCard {
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content:center;
+  padding-bottom: 20px;
+  background: aliceblue
+}
+
+#profile-image1 {
+  width: 100px;
+  height: 100px;
+  border:2px solid #03b1ce ;
+}
+
+.button-view-poll {
+  box-sizing: border-box;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: red;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: red;
+  width: 80%;
+  display: block;
+  align-self: center;
+  margin-left: 10%;
+}
+
+.submit-btn {
+  box-sizing: border-box;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: red;
+  background: #FFFFFF;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: red;
+  width: 80%;
+  display: block;
+  align-self: center;
+  margin-left: 10%;
+  border-width: 3px;
+  margin-bottom: 10px;
+}
+
+ .meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: cyan;
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43,194,83) 37%,
+    rgb(84,240,84) 69%
+  );
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+} 
+.meter { 
+	height: 20px;  /* Can be anything */
+	position: relative;
+	background:lightgrey;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 5px;
+  box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+  margin:10px;
+  width:75%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
