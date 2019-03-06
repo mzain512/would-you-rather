@@ -7,8 +7,6 @@ export const handleGetAllData = () => {
     return (dispatch) => {
         dispatch(showLoading())
         Promise.all([_getUsers() ,_getQuestions()]).then(([users , questions]) => {
-                // console.log(users)
-                // console.log(questions)
                 dispatch(fetchUsers(users))
                 dispatch(fetchQuestions(questions))
                 dispatch(hideLoading())
