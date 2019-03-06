@@ -21,7 +21,7 @@ class Nav extends React.Component {
               </NavLink>
                         </li>
                         <li>
-                            <NavLink className='navLinks' to={Constants.HOME} activeClassName='active'>
+                            <NavLink className='navLinks' to={Constants.LEADERBOARD} activeClassName='active'>
                                 LeaderBoard
               </NavLink>
                         </li>

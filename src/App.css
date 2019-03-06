@@ -248,6 +248,17 @@ li {
   background-color: rgb(43,194,83,0.6);
 }
 
+.leaderboardCard {
+  width: 35%;
+  margin: 10px auto;
+  border-radius: 5px;
+  border-color: rgb(43,194,83,0.6);
+  border-radius: 5px;
+  border-style: solid;
+  flex-direction: row;
+  display: flex;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

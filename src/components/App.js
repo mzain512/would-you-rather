@@ -5,10 +5,11 @@ import Signin from './SignIn'
 import Nav from './Nav'
 import { BrowserRouter as Router, Route, withRouter, Redirect } from 'react-router-dom'
 import Home from './Home'
-import { HOME, SIGN_IN, VIEW_POLL, ADD_QUESTION } from '../utils/urls'
+import { HOME, SIGN_IN, VIEW_POLL, ADD_QUESTION, LEADERBOARD } from '../utils/urls'
 import LoadingBar from 'react-redux-loading';
 import Question from './Question'
 import NewQuestion from './NewQuestion'
+import Leaderboard from './Leaderboard'
 
 class App extends Component {
 
@@ -43,6 +44,7 @@ class App extends Component {
           <Route path={HOME} exact component={Home} />
           <Route path={VIEW_POLL + ':id'} exact component={Question} />
           <Route path={ADD_QUESTION} exact component={NewQuestion} />
+          <Route path={LEADERBOARD} exact component={Leaderboard} />
         </div>
       </Router>
     );
