@@ -14,11 +14,11 @@ import Leaderboard from './Leaderboard'
 class App extends Component {
 
   state = {
-    userLogoutCheck : false,
+    userLogoutCheck: false,
   }
 
   handleUserLogout = (logout) => {
-    this.setState((lastState) => ({userLogoutCheck : true}))
+    this.setState((lastState) => ({ userLogoutCheck: true }))
   }
 
   componentDidMount() {
@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <Router>
         <div >
-          <Nav handleUserLogout={this.handleUserLogout}/>
+          <Nav handleUserLogout={this.handleUserLogout} />
 
           <Route path={SIGN_IN} exact component={Signin} />
           <Route path={HOME} exact component={Home} />

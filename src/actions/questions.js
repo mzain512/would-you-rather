@@ -43,11 +43,11 @@ export function handleSaveNewQuestion(author, optionOneText, optionTwoText) {
     return (dispatch) => {
         dispatch(showLoading())
         return _saveQuestion({ author, optionOneText, optionTwoText })
-        .then((question) => {
-            dispatch(saveNewQuestion(question))
-        }).catch((ex) => {
-            alert('Please try again!');
-        })
+            .then((question) => {
+                dispatch(saveNewQuestion(question))
+            }).catch((ex) => {
+                alert('Please try again!');
+            })
             .then(() => dispatch(hideLoading()));
 
     }

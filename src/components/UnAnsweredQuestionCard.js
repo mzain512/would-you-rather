@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { VIEW_POLL } from '../utils/urls'
 class UnAnsweredQuestionCard extends React.Component {
 
@@ -23,8 +23,8 @@ class UnAnsweredQuestionCard extends React.Component {
                     <h2 style={{ margin: '10px' }}>OR</h2>
                     <p>{question.optionTwo.text}</p>
                     <div>
-                    <Link className='button-view-poll'
-                     to={`${VIEW_POLL}${question.id}`}>View Poll</Link>
+                        <Link className='button-view-poll'
+                            to={`${VIEW_POLL}${question.id}`}>View Poll</Link>
                     </div>
                 </div>
             </div>

@@ -30,12 +30,13 @@ class Home extends React.Component {
     }
 
     render() {
+        let questionsList = []
         if (this.state.showAnsweredQuestion) {
-            this.questionsList = this.state.questionsArray.map((question) => (
+            questionsList = this.state.questionsArray.map((question) => (
                 <AnsweredQuestionCard key={question.id} question={question} />
             ))
         } else {
-            this.questionsList = this.state.questionsArray.map((question) => (
+            questionsList = this.state.questionsArray.map((question) => (
                 <UnAnsweredQuestionCard key={question.id} question={question} />
             ))
         }
@@ -47,7 +48,7 @@ class Home extends React.Component {
                 <DashboardButton text='Answered Questions'
                     onClickFunc={this.answeredQuestions}
                     btnColor={this.state.btnColorTwo} />
-                <div>{this.questionsList}</div>
+                <div>{questionsList}</div>
 
             </div>
         )
@@ -61,10 +62,10 @@ function mapStateToProps({ users, questions, authedUser }, props) {
     const unAnsweredQuestions = Object.values(questions).filter((question) => (
         !Object.keys(authedUser.answers).includes(question.id)
     ))
-    
+
     return {
-        unAnsweredQuestions : unAnsweredQuestions.sort((a,b) => b.timestamp - a.timestamp),
-        answeredQuestions: answeredQuestions.sort((a,b) => b.timestamp - a.timestamp),
+        unAnsweredQuestions: unAnsweredQuestions.sort((a, b) => b.timestamp - a.timestamp),
+        answeredQuestions: answeredQuestions.sort((a, b) => b.timestamp - a.timestamp),
         users,
         questions,
         authedUser

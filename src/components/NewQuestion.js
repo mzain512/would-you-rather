@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { handleSaveNewQuestion} from '../actions/questions'
-import {HOME} from '../utils/urls'
-import {withRouter} from 'react-router-dom'
+import { handleSaveNewQuestion } from '../actions/questions'
+import { HOME } from '../utils/urls'
+import { withRouter } from 'react-router-dom'
 
 class NewQuestion extends React.Component {
 
@@ -14,21 +14,21 @@ class NewQuestion extends React.Component {
     onChangeOptionOne = (event) => {
         event.preventDefault()
         const value = event.target.value
-        this.setState({optionOne:value})
+        this.setState({ optionOne: value })
     }
 
     onChangeOptionTwo = (event) => {
         event.preventDefault()
         const value = event.target.value
-        this.setState({optionTwo:value})
+        this.setState({ optionTwo: value })
     }
 
     handleSubmit = () => {
         const { authedUser } = this.props
-        this.props.dispatch(handleSaveNewQuestion(authedUser.id,this.state.optionOne,this.state.optionTwo))
-        .then(() => {
-            this.props.history.push(HOME)
-        })
+        this.props.dispatch(handleSaveNewQuestion(authedUser.id, this.state.optionOne, this.state.optionTwo))
+            .then(() => {
+                this.props.history.push(HOME)
+            })
     }
 
     render() {
@@ -41,8 +41,8 @@ class NewQuestion extends React.Component {
                     optionOne={this.state.optionOne}
                     optionTwo={this.state.optionTwo}
                     optionOneFunc={this.onChangeOptionOne}
-                    optionTwoFunc={this.onChangeOptionTwo} 
-                    handleSubmit={this.handleSubmit}/>
+                    optionTwoFunc={this.onChangeOptionTwo}
+                    handleSubmit={this.handleSubmit} />
             </div>
         )
     }
@@ -67,7 +67,7 @@ function InputForm(props) {
                 placeholder='Enter Option Two Text Here' name="name" onChange={props.optionTwoFunc} />
             <br />
             <input className='formSubmit' type="submit" value="Submit"
-                disabled={props.optionOne === '' || props.optionTwo === ''} onClick={props.handleSubmit}/>
+                disabled={props.optionOne === '' || props.optionTwo === ''} onClick={props.handleSubmit} />
             <br />
         </div>
     )

@@ -54,7 +54,7 @@ class Nav extends React.Component {
     }
 }
 
-function mapStateToProps({ authedUser } ,{handleUserLogout}) {
+function mapStateToProps({ authedUser }, { handleUserLogout }) {
     return {
         authedUser,
         isAutherized: authedUser !== null ? true : false,

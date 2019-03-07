@@ -3,13 +3,13 @@ export const LOGOUT = 'LOGOUT'
 
 export function setAuthedUser(id) {
     return {
-        type : SET_AUTHED_USER ,
+        type: SET_AUTHED_USER,
         id
     }
 }
 
 export function userLogout() {
     return {
-        type:LOGOUT
+        type: LOGOUT
     }
 }

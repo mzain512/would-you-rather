@@ -15,7 +15,7 @@ class Answer extends React.Component {
             optionTwoColor = 'rgb(230,251,249)'
         }
         return (
-            <div style={{ margin: '5px auto', border: 'solid', width: '550px', borderColor: 'cyan', borderRadius: '5px' , textAlign:'center'}}>
+            <div style={{ margin: '5px auto', border: 'solid', width: '550px', borderColor: 'cyan', borderRadius: '5px', textAlign: 'center' }}>
                 <div style={{ marginLeft: '10px', textAlign: 'center', borderBottom: 'solid', borderBottomColor: 'grey' }}>
                     <h4>{'Asked by ' + author.name}</h4>
                 </div>

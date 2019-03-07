@@ -1,5 +1,5 @@
-import { SET_AUTHED_USER ,LOGOUT } from '../actions/authedUser'
-import { SAVE_ANSWER , NEW_QUESTION} from '../actions/questions'
+import { SET_AUTHED_USER, LOGOUT } from '../actions/authedUser'
+import { SAVE_ANSWER, NEW_QUESTION } from '../actions/questions'
 
 
 export default function authedUser(state = null, action) {
