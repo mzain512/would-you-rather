@@ -31,7 +31,7 @@ class Signin extends Component {
                     <p className="SignInHeader1">Welcome to the Would You Rather App</p>
                     <p className="SignInHeader2">Please Sign in to continue</p>
                 </div>
-                <img src={require('../logo.svg')} width="200" height="200" style={{ margin: -20 }} ></img>
+                <img alt="reactLogo" src={require('../logo.svg')} width="200" height="200" style={{ margin: -20 }} ></img>
                 <p style={{ color: 'rgb(106,217,250)', fontWeight: 'bold', margin: 0, fontSize: '20px' }} >Sign in</p>
                 <select className='dropDown' placeholder=' ' value={this.state.userName} onChange={this.handleChange}>
                     <option value='' disabled={true}>Select User</option>

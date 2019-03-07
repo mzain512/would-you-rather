@@ -2,41 +2,47 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import * as Constants from '../utils/urls'
+import {userLogout} from '../actions/authedUser'
 
 class Nav extends React.Component {
+
+    handleLogout = () => {
+        this.props.dispatch(userLogout())
+    }
+
     render() {
-        const { authedUser } = this.props
+        const { authedUser , isAutherized} = this.props
         return (
             <div>
                 <nav className='nav'>
                     <ul>
                         <li>
-                            <NavLink className='navLinks' to={Constants.HOME} exact activeClassName='active'>
+                            <NavLink className='navLinks' to={isAutherized ? Constants.HOME : '#'} exact activeClassName='active'>
                                 Home
               </NavLink>
                         </li>
                         <li>
-                            <NavLink className='navLinks' to={Constants.ADD_QUESTION} activeClassName='active'>
+                            <NavLink className='navLinks' to={isAutherized ? Constants.ADD_QUESTION : '#'} activeClassName='active'>
                                 New Question
               </NavLink>
                         </li>
                         <li>
-                            <NavLink className='navLinks' to={Constants.LEADERBOARD} activeClassName='active'>
+                            <NavLink className='navLinks' to={isAutherized ? Constants.LEADERBOARD : '#'} activeClassName='active'>
                                 LeaderBoard
               </NavLink>
                         </li>
-                        {authedUser && (
+                        {isAutherized && (
                             <li style={{fontSize:'18px' , fontWeight:'bolder'}}>
 
                                 {'Hello ' + authedUser.name}
 
                             </li>
                         )}
-                        {authedUser && (
+                        {isAutherized && (
                             <li>
-                                <NavLink className='navLinks' to={Constants.HOME} activeClassName='active'>
+                                <button className='navLinks' onClick={this.handleLogout}>
                                     Logout
-              </NavLink>
+              </button>
 
                             </li>
                         )}
@@ -49,7 +55,8 @@ class Nav extends React.Component {
 
 function mapStateToProps({ authedUser }) {
     return {
-        authedUser
+        authedUser,
+        isAutherized : authedUser !== null ? true : false ,
     }
 }
 

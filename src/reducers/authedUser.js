@@ -1,6 +1,6 @@
-import { SET_AUTHED_USER } from '../actions/authedUser'
+import { SET_AUTHED_USER ,LOGOUT } from '../actions/authedUser'
 import { SAVE_ANSWER , NEW_QUESTION} from '../actions/questions'
-import NewQuestion from '../components/NewQuestion';
+
 
 export default function authedUser(state = null, action) {
     switch (action.type) {
@@ -20,6 +20,8 @@ export default function authedUser(state = null, action) {
                 ...state,
                 'questions': state.questions.concat(action.question.id)
             }
+        case LOGOUT:
+            return null
         default:
             return state
     }
