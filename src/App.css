@@ -62,7 +62,7 @@
   height:35px;
   margin: 10px;
   color: #111111;
-  border-color: cyan
+  border-color: rgb(43,194,83,1);
 }
 
 .nav ul {
@@ -71,7 +71,7 @@
   justify-content: flex-start;
   text-decoration: none;
   border-bottom: solid;
-  border-bottom-color: cyan;
+  border-bottom-color: rgb(43,194,83,1);
   margin: 0px;
 }
 
@@ -101,7 +101,7 @@ li {
   display: block;
   margin-top: 10px;
   text-align: center;
-  border-color: cyan;
+  border-color: rgb(43,194,83,1);
   border-radius: 10px;
 
 }
@@ -111,7 +111,7 @@ li {
   border-style: solid;
   /* height: 200px; */
   width:90%;
-  border-color: cyan;
+  border-color: rgb(43,194,83,1);
   border-radius: 10px;
 }
 
@@ -153,11 +153,12 @@ li {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  color: red;
+  color: whitesmoke;
   background: #FFFFFF;
   border-radius: 5px;
   border-style: solid;
-  border-color: red;
+  background-color: rgb(43,194,83,0.6);
+  border-radius: 10px;
   width: 80%;
   display: block;
   align-self: center;
@@ -172,17 +173,16 @@ li {
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  color: red;
+  color: whitesmoke;
   background: #FFFFFF;
   border-radius: 10px;
-  border-style: solid;
-  border-color: red;
+  background-color: rgb(43,194,83,0.6);
   width: 80%;
   display: block;
   align-self: center;
-  margin-left: 10%;
-  border-width: 3px;
   margin-bottom: 10px;
+  text-align: center;
+  margin-left: 10%;
 }
 
  .meter > span {
@@ -192,7 +192,7 @@ li {
   border-bottom-right-radius: 8px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-color: cyan;
+  background-color: rgb(43,194,83,1);
   background-image: linear-gradient(
     center bottom,
     rgb(43,194,83) 37%,
@@ -220,7 +220,7 @@ li {
 .newQuestionCard {
   border-style: solid;
   border-radius: 5px;
-  border-color: cyan;
+  border-color: rgb(43,194,83,1);
   margin: 10px auto;
   width: 34%;
 }

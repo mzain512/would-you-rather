@@ -1,17 +1,18 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import * as Constants from '../utils/urls'
-import {userLogout} from '../actions/authedUser'
+import { userLogout } from '../actions/authedUser'
 
 class Nav extends React.Component {
 
     handleLogout = () => {
+        this.props.handleUserLogout()
         this.props.dispatch(userLogout())
     }
 
     render() {
-        const { authedUser , isAutherized} = this.props
+        const { authedUser, isAutherized } = this.props
         return (
             <div>
                 <nav className='nav'>
@@ -32,7 +33,7 @@ class Nav extends React.Component {
               </NavLink>
                         </li>
                         {isAutherized && (
-                            <li style={{fontSize:'18px' , fontWeight:'bolder'}}>
+                            <li style={{ fontSize: '18px', fontWeight: 'bolder' }}>
 
                                 {'Hello ' + authedUser.name}
 
@@ -53,11 +54,12 @@ class Nav extends React.Component {
     }
 }
 
-function mapStateToProps({ authedUser }) {
+function mapStateToProps({ authedUser } ,{handleUserLogout}) {
     return {
         authedUser,
-        isAutherized : authedUser !== null ? true : false ,
+        isAutherized: authedUser !== null ? true : false,
+        handleUserLogout
     }
 }
 
-export default connect(mapStateToProps)(Nav)
+export default withRouter(connect(mapStateToProps)(Nav))

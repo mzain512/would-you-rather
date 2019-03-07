@@ -29,22 +29,19 @@ class Question extends React.Component {
         if(Object.keys(authedUser['answers']).includes(question.id)) {
             return <Answer question={question} author={author}/>
         }
-        // if (this.state.isAnswered) {
-        //     return <Answer question={question} author={author}/>
-        // }
 
         return (
-            <div style={{ margin: '10px auto', border: 'solid', width: '300px', borderColor: 'cyan', borderRadius: '10px', textAlign: 'center' }}>
-                <div style={{ textAlign: 'center' }}>{author.name + ' says'}</div>
+            <div style={{ margin: '10px auto', border: 'solid', width: '500px', borderColor: 'rgb(43,194,83,1)', borderRadius: '10px', textAlign: 'center' }}>
+                <div style={{ textAlign: 'center' , marginBottom:'20px'}}>{author.name + ' says'}</div>
                 <img alt="User Pic"
                     src={author.avatarURL}
                     height='80px' style={{ borderRadius: '40px', margin: 'auto', textAlign: 'center' }}></img>
                 <h1 style={{ textAlign: 'center' }}>Would you rather</h1>
-                <form onSubmit={this.onSubmit}>
-                    <input type="radio" name='options' value='optionOne' onChange={this.handleRadioAction}
+                <form onSubmit={this.onSubmit} style={{textAlign:'left'}}>
+                    <input style={{marginLeft:'25px'}} type="radio" name='options' value='optionOne' onChange={this.handleRadioAction}
                         checked={this.state.selectedOption === 'optionOne'} />{question.optionOne.text}
                     <br />
-                    <input style={{marginBottom:'10px'}} type="radio" name='options' value='optionTwo' onChange={this.handleRadioAction}
+                    <input style={{marginBottom:'10px',marginLeft:'25px'}} type="radio" name='options' value='optionTwo' onChange={this.handleRadioAction}
                         checked={this.state.selectedOption === 'optionTwo'} />{question.optionTwo.text}
                     <br />
                     <input className='submit-btn' type='submit' disabled={this.state.selectedValue === ''}></input>

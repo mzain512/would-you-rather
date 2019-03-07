@@ -42,7 +42,7 @@ class Signin extends Component {
                 <br /><br />
                 <button style={{
                     width: '250px', height: '40px',
-                    backgroundColor: 'rgb(51,250,250)',
+                    backgroundColor: 'rgb(43,194,83,0.6)',
                     borderRadius: '5px', fontSize: '15px'
                 }} disabled={this.state.signInBtn} onClick={this.handleSignIn}>Sign in</button>
             </div>

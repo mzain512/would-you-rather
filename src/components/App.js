@@ -13,6 +13,14 @@ import Leaderboard from './Leaderboard'
 
 class App extends Component {
 
+  state = {
+    userLogoutCheck : false,
+  }
+
+  handleUserLogout = (logout) => {
+    this.setState((lastState) => ({userLogoutCheck : true}))
+  }
+
   componentDidMount() {
     this.props.dispatch(handleGetAllData())
   }
@@ -26,19 +34,20 @@ class App extends Component {
       return <Redirect to={
         {
           pathname: SIGN_IN,
+          state: { from: location }
         }
       } />
     } else if (authedUser !== null && location.pathname === SIGN_IN) {
       return <Redirect to={
         {
-          pathname: HOME,
+          pathname: this.state.userLogoutCheck ? HOME : location.state.from.pathname,
         }
       } />
     }
     return (
       <Router>
         <div >
-          <Nav />
+          <Nav handleUserLogout={this.handleUserLogout}/>
 
           <Route path={SIGN_IN} exact component={Signin} />
           <Route path={HOME} exact component={Home} />
