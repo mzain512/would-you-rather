@@ -10,9 +10,9 @@ class Answer extends React.Component {
         let optionOneColor = 'rgb(255,255,255)'
         let optionTwoColor = 'rgb(255,255,255)'
         if (question['optionOne'].votes.includes(authedUser.id)) {
-            optionOneColor = 'rgb(230,251,249)'
+            optionOneColor = 'rgb(150,251,249)'
         } else {
-            optionTwoColor = 'rgb(230,251,249)'
+            optionTwoColor = 'rgb(150,251,249)'
         }
         return (
             <div style={{ margin: '5px auto', border: 'solid', width: '550px', borderColor: 'cyan', borderRadius: '5px', textAlign: 'center' }}>
@@ -38,7 +38,7 @@ class Answer extends React.Component {
                         currentVotes={question['optionTwo'].votes.length} />
 
                 </div>
-
+                <div style={{margin:'10px'}}>Note: Option with the coloured background represents your vote.</div>
             </div>
         )
     }
@@ -58,7 +58,7 @@ function AnswerBox(props) {
         <div style={{
             border: 'solid', borderRadius: '5px',
             borderColor: 'cyan',
-            alignItems: 'center', margin: '5px', width: '50%', backßgroundColor: props.optionColor
+            alignItems: 'center', margin: '5px', width: '50%', backgroundColor: props.optionColor
         }}><h5>{'Would you rather ' + props.questionText + '?'}</h5>
             <div className="meter">
                 <p style={{ float: 'right', marginTop: 'auto', marginRight: '-40px' }}>{props.percentage + '%'}</p>
